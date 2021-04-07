@@ -1,4 +1,4 @@
-from main.card import Card
+from backend.main.card import Card
 
 
 def test_card_creation():

@@ -1,6 +1,5 @@
 import random
-
-from main.card import ranks, suits, Card
+from backend.main.card import ranks, suits, Card
 
 
 class Deck:

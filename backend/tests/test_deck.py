@@ -1,5 +1,5 @@
-from main.deck import Deck
-from main.card import Card
+from backend.main.deck import Deck
+from backend.main.card import Card
 
 
 def test_deck_creation():
