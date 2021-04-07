@@ -28,3 +28,17 @@ def test_adjust_for_aces():
     assert hand.value == 28
     hand.adjust_for_ace()
     assert hand.value == 18
+
+
+def test_split_hand():
+    hand = Hand()
+    card1 = Card('Hearts', 'Ten')
+    card2 = Card('Spades', 'Ten')
+    cards = [card1, card2]
+    for card in cards:
+        hand.add_card_to_hand(card)
+
+    if hand.cards[0].rank == hand.cards[-1].rank and hand.cards[0].rank != 'Ace':
+        hand.split_hand()
+
+        assert hand.cards[0].value == hand.cards_split[0].value
